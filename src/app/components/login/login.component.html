@@ -1,0 +1,104 @@
+
+  <!-- <p>login component</p> -->
+
+  <div class="container" >
+
+    <div class="c_form position-absolute top-50 start-50 translate-middle " >
+        <div class="text text-center pt-4 pb-2 titre_con ">
+            Se connecter
+        </div>
+        <div class="text-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>                </div>
+            <!-- Form -->
+            <div class="pt-3 ps-4 pe-4 pb-3">
+            <form name="form_log" action="" id="form_log" method="get" autocomplete="on" onsubmit="return connecter()" >
+                <div class="text-center mt-4 position-relative">
+                    <!-- login -->
+                    <div class="input-group ">
+                    <div class="ms-1 mt-1 me-2" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>                        </div>
+                    <input class="form-control" id="login" name="login" type="text" value="" placeholder="Veuillez saisir votre login"  />
+
+                    </div >
+                    <!-- password -->
+                    <div class="input-group pt-3 pb-4">
+                    <div class="ms-1 mt-1 me-2" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                        </svg>                        </div>
+                    <input class="form-control" id="password" name="password" type="password" value="" placeholder="Veuillez saisir votre mot de passe"   />
+
+                    </div>
+                </div>
+                <!-- se connecter -->
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input class="btn btn-outline-secondary text-black rounded-pill b" type="submit" name="submit" id="submit" value="Se connecter">
+                </div>
+            </form>
+
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script language="javascript">
+
+        $(document).ready(function(){
+
+            var login = $("#login");
+            var password = $("#password");
+            var loginRegExp = new RegExp('^[a-zA-Z0-9._\-]+$', 'g');
+            var passwordRegExp = new RegExp('^[a-zA-Z0-9._@\-]+$', 'g');
+            var bool=false;
+            $("#submit").click(function connecter(){
+
+                $("#login").removeClass("is-invalid")
+                $("#login").removeClass("is-valid")
+
+                if(login.val()!=""){
+                    if(login.val().match(loginRegExp)){
+                        $("#login").addClass("is-valid");
+                        bool= true;
+                    }
+                    else{
+                        $("#login").addClass("is-invalid");
+                        bool= false;
+                    }
+                }
+                else{
+                    $("#login").addClass("is-invalid");
+                    bool= false;
+                }
+
+
+                $("#password").removeClass("is-invalid")
+                $("#password").removeClass("is-valid")
+
+                if(password.val()!=""){
+                    if(password.val().match(passwordRegExp)){
+                        $("#password").addClass("is-valid")
+                        bool= true ;
+                    }
+                    else{
+                        $("#password").addClass("is-invalid");
+                        bool= false;
+                    }
+                }
+                else{
+                    $("#password").addClass("is-invalid");
+                    bool= false;
+                }
+
+            return bool;
+            });
+        })
+
+    </script> -->
+

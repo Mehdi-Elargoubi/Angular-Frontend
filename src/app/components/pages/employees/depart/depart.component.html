@@ -1,0 +1,102 @@
+
+
+        <!------------------------------------ Formulaire de départ--------------------------- -->
+        <div class=" container bg-light av pt-1 pb-2 mt-5">
+          <p class="TEXT text-center fs-1 mt-2 ">Départ</p>
+          <hr class="text-black" size="4">
+
+          <form action="" method="" id="form_depart" name="form_depart" autocomplete="on" class="row  mt-4 me-2 ms-2 pb-2 " onsubmit="return valider()">
+
+              <!-- input date de depart  -->
+              <label for="date_depart" class="col-sm-6 col-form-label "> Date de départ </label>
+              <div class="col-sm-6 mb-4">
+                  <input type="date" class="form-control " id="date_depart" name="date_depart">
+              </div>
+
+              <!-- input dernier jour travaillé de depart  -->
+              <label for="dernier_jour_travaillé" class="col-sm-6 col-form-label ">Dernier jour travaillé </label>
+              <div class="col-sm-6 mb-4">
+                  <input type="date" class="form-control" id="dernier_jour_travaillé" name="dernier_jour_travaillé" >
+              </div>
+
+              <!-- input motif de départ -->
+              <label for="motif_depart" class="col-sm-6 col-form-label ">Motif de départ</label>
+              <div class="col-sm-6 mb-4">
+                  <select class="form-select" id="motif_depart" name="motif_depart">
+                      <option selected>Motif</option>
+                      <option value="m2">motif 1</option>
+                      <option value="m1">motif2</option>
+                  </select>
+              </div>
+
+              <!-- input de reemployer -->
+              <label for="reemployer" class="col-sm-6 col-form-label">Voulez-vous le réemployer ?<span  class="text-danger"> *</span></label>
+              <div class="col-sm-6 mb-4">
+                  <select class="form-select" id="reemployer" name="reemployer" required>
+                      <option value="none" selected>Oui / Non</option>
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+                  </select>
+              </div>
+
+              <!-- button sumit reset -->
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4 mb-2">
+                  <input class="btn btn-outline-info me-md-2 col-3 depart" type="submit" name="submit" id="submit" value="Valider">
+                  <input class="btn btn-outline-danger col-3" type="reset" name="reset" id="reset" value="Annuler">
+              </div>
+          </form>
+
+      </div>
+
+
+      <!-- <script>
+        
+          $(document).ready(function(){
+
+            var reemployer = $("#reemployer");
+            var date_depart = Date.parse(document.getElementById('date_depart').value);
+            var dernier_jour_travaillé = Date.parse(document.getElementById('dernier_jour_travaillé').value);
+            var motif_depart = $("#motif_depart");
+            var bool1=true;
+            var bool2=true;
+
+              $("#submit").click(function valider(){
+
+          // validation du chap de reemployement
+                  $("small").remove();
+
+                  $("#reemployer").removeClass("is-invalid")
+                  $("#reemployer").removeClass("is-valid")
+
+                  if(reemployer.val()=="none"){
+                      $("#reemployer").addClass("is-invalid");
+                      $("#reemployer").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez renseigner ce champ</small></i>");
+                      bool1= false;
+                  }
+                  else{
+                      $("#reemployer").addClass("is-valid");
+                      bool1= true;
+                  }
+
+                  return bool1;
+              });
+                  });
+
+            $(document).ready(function(){
+
+                $("#reset").click(function(){
+
+                $("small").remove();
+                $("i").remove();
+
+                $("#reemployer").removeClass("is-invalid")
+                $("#reemployer").removeClass("is-valid")
+
+              })
+
+
+            })
+
+</script> -->
+
+

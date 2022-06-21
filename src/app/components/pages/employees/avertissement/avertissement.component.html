@@ -1,0 +1,47 @@
+
+    <!-------------------------------- Formulaire d'avertissement ----------------------->
+    <div class=" container bg-light av pt-1 pb-2 mt-5 wid">
+      <div class="TEXT text-center fs-2 mt-3">Avertissement</div>
+      <hr class="text-black" size="4">
+
+      <form action="" method="" id="form_avertissement" name="form_avertissement" autocomplete="on" class="row  mt-4 me-2 ms-2 pb-2 ">
+          <!-- input date de modification  -->
+          <label for="date_modification" class="col-sm-6 col-form-label ">Quand souhaitez-vous que vos modifications prennent effet ?</label>
+          <div class="col-sm-6 mb-4">
+              <input type="datetime-local" class="form-control mt-3" id="date_modification" name="date_modification" >
+          </div>
+
+          <!-- input type d'Avertissement -->
+          <label for="type_avertissement" class="col-sm-6 col-form-label">Type d'avertissement <span  class="text-danger">*</span></label>
+          <div class="col-sm-6 mb-4" >
+              <select class="form-select t" id="type_avertissement" name="type_avertissement">
+              <option value=none selected>Choisir un type</option>
+                  <option value="type1">type1</option>
+                  <option value="type2">type2</option>
+              </select>
+          </div>
+
+          <!-- input download file -->
+          <label for="file_avertissement" class="col-sm-6 col-form-label"><i><u>Pièce jointe</u></i></label>
+          <div class="col-sm-6 mb-4" id="file_avertissement" name="file_avertissement" >
+              <input type="file" class="form-control is" id="image" name="image" accept="image/png, image/jpeg">
+          </div>
+
+          <hr class="mt-3 mb-3" >
+
+          <!-- input commentaire -->
+          <label for="commentaire" class="col-sm-3 col-form-label ">Commentaire</label>
+          <div class="form-floating col-sm-9 ">
+              <textarea class="form-control" placeholder="Laisser un commentaire ici" id="commentaire" style="height: 60px"></textarea>
+              <label for="commentaire" class="ps-4">Commentaire</label>
+          </div>
+
+          <!-- button sumit reset -->
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4 mb-2">
+              <button class="btn btn-outline-info me-md-2" id="ajouter_avertissement" type="submit" >Ajouter</button>
+              <button class="btn btn-outline-danger" type="reset">Annuler</button>
+          </div>
+      </form>
+
+      <!-- <div class="dropdown-divider"></div>    <li><hr class="dropdown-divider"></li> -->
+  </div>
