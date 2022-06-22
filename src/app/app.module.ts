@@ -10,6 +10,9 @@ import { ListeEmployeesComponent } from './components/pages/employees/liste-empl
 import { ProfileComponent } from './components/pages/employees/profile/profile.component';
 import { DepartComponent } from './components/pages/employees/depart/depart.component';
 import { AvertissementComponent } from './components/pages/employees/avertissement/avertissement.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeComponent } from './employee/employee.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { AvertissementComponent } from './components/pages/employees/avertisseme
     ListeEmployeesComponent,
     ProfileComponent,
     DepartComponent,
-    AvertissementComponent
+    AvertissementComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

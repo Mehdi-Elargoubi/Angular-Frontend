@@ -1,4 +1,7 @@
+import { EmployeeService } from './../../../../employee.service';
 import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/employee';
+import { Router } from '@angular/router';
 
 declare  var $ : any;
 
@@ -9,7 +12,9 @@ declare  var $ : any;
 })
 export class RecrutementComponent implements OnInit {
 
-  constructor() { }
+  employee : Employee = new Employee();
+  constructor(private employeeService : EmployeeService,
+    private router : Router ) { }
 
   ngOnInit(): void {
 
@@ -180,20 +185,20 @@ export class RecrutementComponent implements OnInit {
 
   // validation du date de naissance
             // var date_naiss=  Date.parse(document.getElementById('date_naiss').value);
-            var date_naiss= $("#date_naiss");
+            // var date_naiss= $("#date_naiss");
 
-            $("#date_naiss").removeClass("is-invalid");
-            $("#date_naiss").removeClass("is-valid");
+            // $("#date_naiss").removeClass("is-invalid");
+            // $("#date_naiss").removeClass("is-valid");
 
-            if (!isNaN(date_naiss)) {
-                $("#date_naiss").addClass("is-valid");
-                bool7 = true;
-            }
-            else{
-                $("#date_naiss").addClass("is-invalid");
-                $("#date_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
-                bool7 = false;
-            }
+            // if (!isNaN(date_naiss)) {
+            //     $("#date_naiss").addClass("is-valid");
+            //     bool7 = true;
+            // }
+            // else{
+            //     $("#date_naiss").addClass("is-invalid");
+            //     $("#date_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
+            //     bool7 = false;
+            // }
 
 
   // validation du lieu de naissance
@@ -467,21 +472,22 @@ export class RecrutementComponent implements OnInit {
   // date d embauche
 
             // var hiredate= Date.parse(document.getElementById('hiredate').value);
-            var hiredate= $("#hiredate");
+  //           var hiredate= $("#hiredate");
 
-            $("#hiredate").removeClass("is-invalid");
-            $("#hiredate").removeClass("is-valid");
+  //           $("#hiredate").removeClass("is-invalid");
+  //           $("#hiredate").removeClass("is-valid");
 
-            if (!isNaN(hiredate)) {
-                $("#hiredate").addClass("is-valid");
-                bool24 = true;
-            }
-            else{
-                $("#hiredate").addClass("is-invalid");
-                $("#hiredate").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
-                bool24 = false;
-            }
-  //------------------------------------
+  //           if (!isNaN(hiredate)) {
+  //               $("#hiredate").addClass("is-valid");
+  //               bool24 = true;
+  //           }
+  //           else{
+  //               $("#hiredate").addClass("is-invalid");
+  //               $("#hiredate").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
+  //               bool24 = false;
+  //           }
+
+  // //------------------------------------
   // validation du poste collaborateur
             $("#poste").removeClass("is-invalid");
             $("#poste").removeClass("is-invalid");
@@ -739,6 +745,19 @@ export class RecrutementComponent implements OnInit {
 
   })
 
+  }
+
+
+  goToEmployeeList(){
+    this.router.navigate(['/listeEmployees']);
+  }
+
+  onSubmit(){
+    this.employeeService.addEmployee(this.employee).subscribe(data => {
+      console.log(data);
+      this.goToEmployeeList();
+    },
+    error => console.log(error));
   }
 
 }

@@ -39,29 +39,35 @@
         <tr>
           <th>Id</th>
           <th>Nom</th>
-          <th>Prenom</th>
+          <th>Prénom</th>
           <th>CIN</th>
           <th>Téléphone</th>
+          <th>Email</th>
+          <th>Poste</th>
+          <th>Date d'embauche</th>
           <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let employee of employees">
+            <td scope="row"> {{employee.id}} </td>
+            <td> {{employee.nom}} </td>
+            <td> {{employee.prenom}} </td>
+            <td> {{employee.cin}} </td>
+            <td> {{employee.tel}} </td>
+            <td> {{employee.email}} </td>
+            <td> {{employee.poste}} </td>
+            <td> {{employee.hiredate}} </td>
+            <td></td>
+          </tr>
+          <!-- <tr>
             <td scope="row"></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-          </tr>
-          <tr>
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          </tr> -->
         </tbody>
     </table>
 

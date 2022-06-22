@@ -1,1016 +1,1017 @@
 
 
-  <div class="container" >
-      <!-- dak chwiiii lfuu9 -->
-      <div class="c_form position-absolute top-50 start-50 translate-middle mb-5" >
-          <!-- hadi katban-->
-
-          <!-- return icon -->
-          <a routerLink="/listeEmployees" class="text-dark">
-              <div class="ms-3 ">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-                      <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-                  </svg>
-              </div>
-          </a>
-          <div class="m-4 position-relative pb-2">
-              <form name="recru" action="" id="recru" method="" autocomplete="on" class="row m-5 mt-2 pb-2" onsubmit="return Ajouter()">
-
-                      <legend class="text text-center fs-1 mt-2 text-primary text-opacity-75" >Informations Personnelles </legend>
-                      <hr class="border-primary opacity-75 mb-4 text-primary"  size="4">
-
-
-                      <!-- <div class="row m-5 mt-2 position-absolute">   -->
-                          <!-- awel div -->
-
-                          <div class=" text text-center pb-3 fs-3 text-decoration-underline text-secondary">Biographie</div>
-
-                                  <!-- Nom -->
-                          <label for="nom" class="col-sm-2 col-form-label">Nom<span  class="text-danger">*</span></label>
-                          <div class="col-sm-4 ">
-                              <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
-                          </div>
-                                  <!-- prenom -->
-                          <label for="prenom" class="col-sm-2 col-form-label" >Prénom<span  class="text-danger">*</span></label>
-                          <div class="col-sm-4 mb-4">
-                              <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required>
-                          </div>
-
-                                  <!-- prenom2 -->
-                          <label for="prenom2" class="col-sm-2 col-form-label">Deuxième prénom</label>
-                          <div class="col-sm-4 ">
-                              <input type="text" class="form-control" id="prenom2" name="prenom2" placeholder="Deuxième Prénom">
-                          </div>
-
-                          <label for="image" class="col-sm-2 col-form-label">Image</label>
-                          <div class="col-sm-4 mb-4">
-                              <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg">
-                          </div>
-
-
-                          <label for="sexe" class="col-sm-2 col-form-label">Sexe<span  class="text-danger">*</span></label>
-                          <div class="col-sm-4 ">
-                              <select class="form-select" id="sexe" required>
-                                  <option value="none" selected>Choisir un sexe</option>
-                                  <option value="homme">Homme</option>
-                                  <option value="femme">Femme</option>
-                              </select>
-                          </div>
-
-                          <label for="genre" class="col-sm-2 col-form-label">Genre<span  class="text-danger">*</span></label>
-                          <div class="col-sm-4 mb-4">
-                              <select class="form-select" id="genre" required>
-                                  <option value="none" selected>Choisir un genre</option>
-                                  <option value="mr">Mr.</option>
-                                  <option value="mme">Mme</option>
-                                  <option value="mlle">Mlle</option>
-                              </select>
-                          </div>
-
-
-                          <label for="situation" class="col-sm-2 col-form-label">Situation familiale</label>
-                          <div class="col-sm-4 mb-4">
-                              <select class="form-select" id="situation">
-                                  <option value="none" selected>Choisir la situation de famille</option>
-                                  <option value="celibataire">Célibataire</option>
-                                  <option value="marie">Marié</option>
-                                  <option value="divorce">Divorcé</option>
-                                  <option value="separe">Séparé</option>
-                                  <option value="veuf">Veuf</option>
-                              </select>
-                          </div>
-                          <div class="col-sm-6 mb-4"></div>
-
-
-                          <label for="date_naiss" class="col-sm-2 col-form-label">Date de naissance</label>
-                          <div class="col-sm-4 ">
-                              <input type="date" class="form-control" id="date_naiss" name="date_naiss" >
-                          </div>
-
-                          <label for="lieu_naiss" class="col-sm-2 col-form-label">Lieu de naissance</label>
-                          <div class="col-sm-4 mb-4">
-                              <input type="text" class="form-control" id="lieu_naiss" name="lieu_naiss" placeholder="Lieu de naissance" size="2">
-                          </div>
-
-                          <label for="pays" class="col-sm-2 col-form-label">Pays</label>
-                          <div class="col-sm-4 ">
-                              <select class="form-select" id="pays">
-                                  <option value="none" selected>Choisir un pays</option>
-                                  <option value="maroc">Maroc</option>
-                                  <option value="france">France</option>
-                                  <option value="egypt">Egypt</option>
-                              </select>
-                          </div>
-
-                          <label for="ville" class="col-sm-2 col-form-label">Ville</label>
-                          <div class="col-sm-4 mb-4">
-                              <select class="form-select" id="ville">
-                                  <option value="none" selected>Choisir une ville</option>
-                                  <option value="agadir">Agadir</option>
-                                  <option value="casablanca">Casablanca</option>
-                                  <option value="rabat">Rabat</option>
-                              </select>
-                          </div>
-
-                          <label for="nationalite" class="col-sm-2 col-form-label">Nationalité</label>
-                          <div class="col-sm-4 ">
-                              <select class="form-select" id="nationalite">
-                                  <option value="none" selected>Choisir une nationalité</option>
-                                  <option value="marocaine">Marocaine</option>
-                                  <option value="francaise"></option>
-                                  <option value="egyptien"></option>
-                              </select>
-                          </div>
-
-                          <label for="langue" class="col-sm-2 col-form-label">Langue maternelle</label>
-                          <div class="col-sm-4 mb-4">
-                              <select class="form-select" id="langue">
-                                  <option value="none" selected>Choisir une langue</option>
-                                  <option value="arab">Arab</option>
-                                  <option value="francais">Francais</option>
-                                  <option value="anglais">Anglais</option>
-                              </select>
-                          </div>
-
-                          <div class="text text-center text-decoration-underline ps-0 ms-0 pb-4 fs-3 mt-4 text-secondary">Contacts & Adresses</div>
+    <div class="container" >
+        <!-- dak chwiiii lfuu9 -->
+        <div class="c_form position-absolute top-50 start-50 translate-middle mb-5" >
+            <!-- hadi katban-->
+    <p class="text text-center text-secondary fs-1 pt-4" >Recrutement</p>
+
+            <!-- return icon -->
+            <a routerLink="/listeEmployees" class="text-dark">
+                <span class="ms-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                        <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                    </svg>
+                </span>
+            </a>
+            <div class="position-relative pb-2">
+                <form name="recru" action="" id="recru" method="" autocomplete="on" class="row m-5 mt-2 pb-2" onsubmit="return Ajouter()"  (ngSubmit)="onSubmit()" #addForm="ngForm" >
+
+                        <legend class="text text-center fs-1 mt-2 text-primary text-opacity-75" >Informations Personnelles </legend>
+                        <hr class="border-primary opacity-75 mb-4 text-primary"  size="4">
+
+
+                        <!-- <div class="row m-5 mt-2 position-absolute">   -->
+                            <!-- awel div -->
+
+                            <div class=" text text-center pb-3 fs-3 text-decoration-underline text-secondary">Biographie</div>
+
+                                    <!-- Nom -->
+                            <label for="nom" class="col-sm-2 col-form-label">Nom<span  class="text-danger">*</span></label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required [(ngModel)]="employee.nom" >
+                            </div>
+                                    <!-- prenom -->
+                            <label for="prenom" class="col-sm-2 col-form-label" >Prénom<span  class="text-danger">*</span></label>
+                            <div class="col-sm-4 mb-4">
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required [(ngModel)]="employee.prenom">
+                            </div>
+
+                                    <!-- prenom2 -->
+                            <label for="prenom2" class="col-sm-2 col-form-label">Deuxième prénom</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control" id="prenom2" name="prenom2" placeholder="Deuxième Prénom" [(ngModel)]="employee.prenom">
+                            </div>
+
+                            <label for="image" class="col-sm-2 col-form-label">Image</label>
+                            <div class="col-sm-4 mb-4">
+                                <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg">
+                            </div>
+
+
+                            <label for="sexe" class="col-sm-2 col-form-label">Sexe<span  class="text-danger">*</span></label>
+                            <div class="col-sm-4 ">
+                                <select class="form-select" id="sexe" required [(ngModel)]="employee.sexe" >
+                                    <option value="none" selected>Choisir un sexe</option>
+                                    <option value="homme">Homme</option>
+                                    <option value="femme">Femme</option>
+                                </select>
+                            </div>
+
+                            <label for="genre" class="col-sm-2 col-form-label">Genre<span  class="text-danger">*</span></label>
+                            <div class="col-sm-4 mb-4">
+                                <select class="form-select" id="genre" required [(ngModel)]="employee.genre" >
+                                    <option value="none" selected>Choisir un genre</option>
+                                    <option value="mr">Mr.</option>
+                                    <option value="mme">Mme</option>
+                                    <option value="mlle">Mlle</option>
+                                </select>
+                            </div>
+
+
+                            <label for="situation" class="col-sm-2 col-form-label">Situation familiale</label>
+                            <div class="col-sm-4 mb-4">
+                                <select class="form-select" id="situation" [(ngModel)]="employee.situation" >
+                                    <option value="none" selected>Choisir la situation de famille</option>
+                                    <option value="celibataire">Célibataire</option>
+                                    <option value="marie">Marié</option>
+                                    <option value="divorce">Divorcé</option>
+                                    <option value="separe">Séparé</option>
+                                    <option value="veuf">Veuf</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 mb-4"></div>
+
+
+                            <label for="date_naiss" class="col-sm-2 col-form-label">Date de naissance</label>
+                            <div class="col-sm-4 ">
+                                <input type="date" class="form-control" id="date_naiss" name="date_naiss" [(ngModel)]="employee.date_naiss" >
+                            </div>
+
+                            <label for="lieu_naiss" class="col-sm-2 col-form-label">Lieu de naissance</label>
+                            <div class="col-sm-4 mb-4">
+                                <input type="text" class="form-control" id="lieu_naiss" name="lieu_naiss" placeholder="Lieu de naissance" size="2" [(ngModel)]="employee.lieu_naiss" >
+                            </div>
+
+                            <label for="pays" class="col-sm-2 col-form-label">Pays</label>
+                            <div class="col-sm-4 ">
+                                <select class="form-select" id="pays" [(ngModel)]="employee.pays" >
+                                    <option value="none" selected>Choisir un pays</option>
+                                    <option value="maroc">Maroc</option>
+                                    <option value="france">France</option>
+                                    <option value="egypt">Egypt</option>
+                                </select>
+                            </div>
+
+                            <label for="ville" class="col-sm-2 col-form-label">Ville</label>
+                            <div class="col-sm-4 mb-4">
+                                <select class="form-select" id="ville" [(ngModel)]="employee.ville" >
+                                    <option value="none" selected>Choisir une ville</option>
+                                    <option value="agadir">Agadir</option>
+                                    <option value="casablanca">Casablanca</option>
+                                    <option value="rabat">Rabat</option>
+                                </select>
+                            </div>
+
+                            <label for="nationalite" class="col-sm-2 col-form-label">Nationalité</label>
+                            <div class="col-sm-4 ">
+                                <select class="form-select" id="nationalite" [(ngModel)]="employee.nationalite">
+                                    <option value="none" selected>Choisir une nationalité</option>
+                                    <option value="marocaine">Marocaine</option>
+                                    <option value="francaise"></option>
+                                    <option value="egyptien"></option>
+                                </select>
+                            </div>
+
+                            <label for="langue" class="col-sm-2 col-form-label">Langue maternelle</label>
+                            <div class="col-sm-4 mb-4">
+                                <select class="form-select" id="langue" [(ngModel)]="employee.langue" >
+                                    <option value="none" selected>Choisir une langue</option>
+                                    <option value="arab">Arab</option>
+                                    <option value="francais">Francais</option>
+                                    <option value="anglais">Anglais</option>
+                                </select>
+                            </div>
+
+                            <div class="text text-center text-decoration-underline ps-0 ms-0 pb-4 fs-3 mt-4 text-secondary">Contacts & Adresses</div>
 
-                          <label for="tel" class="col-sm-2 col-form-label">Téléphone</label>
-                          <div class="col-sm-4 ">
-                              <input type="number" class="form-control" id="tel" name="tel" placeholder="Téléphone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" size="10" >
-                          </div>
+                            <label for="tel" class="col-sm-2 col-form-label">Téléphone</label>
+                            <div class="col-sm-4 ">
+                                <input type="number" class="form-control" id="tel" name="tel" placeholder="Téléphone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" size="10" [(ngModel)]="employee.tel" >
+                            </div>
 
-                          <label for="email" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-4 mb-4">
-                              <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com">
-                          </div>
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-4 mb-4">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" [(ngModel)]="employee.email" >
+                            </div>
 
+
+                            <label for="adress" class="col-sm-2 col-form-label">Adresse</label>
+                            <div class="col-sm-10 mb-4">
+                                <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse" [(ngModel)]="employee.adress" >
+                            </div>
+
+                            <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-4 text-secondary">Informations d’identifiant</div>
+
+
+                            <label for="cin" class="col-sm-3 col-form-label" >Carte d'identité nationale<span  class="text-danger">*</span></label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="text" class="form-control" id="cin" name="cin" placeholder="CIN" required [(ngModel)]="employee.cin" >
+                            </div>
 
-                          <label for="adress" class="col-sm-2 col-form-label">Adresse</label>
-                          <div class="col-sm-10 mb-4">
-                              <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse" >
-                          </div>
-
-                          <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-4 text-secondary">Informations d’identifiant</div>
-
-
-                          <label for="cin" class="col-sm-3 col-form-label" >Carte d'identité nationale<span  class="text-danger">*</span></label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="text" class="form-control" id="cin" name="cin" placeholder="CIN" required>
-                          </div>
+                            <label for="passeport" class="col-sm-3 col-form-label">Passeport</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="passeport" name="passeport" placeholder="Passeport" [(ngModel)]="employee.passeport">
+                            </div>
 
-                          <label for="passeport" class="col-sm-3 col-form-label">Passeport</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="passeport" name="passeport" placeholder="Passeport" >
-                          </div>
+                            <label for="id_ass" class="col-sm-3 col-form-label " >Identifiant d’assurance maladie</label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="text" class="form-control" id="id_ass" name="id_ass" placeholder="ID d’assurance maladie" [(ngModel)]="employee.id_ass" >
+                            </div>
 
-                          <label for="id_ass" class="col-sm-3 col-form-label " >Identifiant d’assurance maladie</label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="text" class="form-control" id="id_ass" name="id_ass" placeholder="ID d’assurance maladie" >
-                          </div>
+                            <label for="id_sec" class="col-sm-3 col-form-label">Identifiant de sécurité sociale</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="id_sec" name="id_sec" placeholder="ID de sécurité sociale" [(ngModel)]="employee.id_sec" >
+                            </div>
 
-                          <label for="id_sec" class="col-sm-3 col-form-label">Identifiant de sécurité sociale</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="id_sec" name="id_sec" placeholder="ID de sécurité sociale" >
-                          </div>
+                            <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-4 text-secondary">Personne à contacter en cas d’urgence</div>
 
-                          <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-4 text-secondary">Personne à contacter en cas d’urgence</div>
 
+                            <label for="nom_contact" class="col-sm-3 col-form-label" >En cas d’urgence, contacter</label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="text" class="form-control" id="nom_contact" name="nom_contact" placeholder="Nom & Prénom" required [(ngModel)]="employee.nom_contact">
+                            </div>
 
-                          <label for="nom_contact" class="col-sm-3 col-form-label" >En cas d’urgence, contacter</label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="text" class="form-control" id="nom_contact" name="nom_contact" placeholder="Nom & Prénom" required>
-                          </div>
+                            <label for="rel_contact" class="col-sm-3 col-form-label">Relation</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="rel_contact" name="rel_contact" placeholder="" [(ngModel)]="employee.rel_contact">
+                            </div>
 
-                          <label for="rel_contact" class="col-sm-3 col-form-label">Relation</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="rel_contact" name="rel_contact" placeholder="" >
-                          </div>
+                            <label for="tel_contact" class="col-sm-3 col-form-label" >Numéro de téléphone<span  class="text-danger">*</span></label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="number" class="form-control" id="tel_contact" name="tel_contact" placeholder="" [(ngModel)]="employee.tel_contact" >
+                            </div>
 
-                          <label for="tel_contact" class="col-sm-3 col-form-label" >Numéro de téléphone<span  class="text-danger">*</span></label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="number" class="form-control" id="tel_contact" name="tel_contact" placeholder="" >
-                          </div>
+                            <label for="email_contact" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="email_contact" name="email_contact" placeholder="email@exemple.com" [(ngModel)]="employee.email_contact" >
+                            </div>
 
-                          <label for="email_contact" class="col-sm-3 col-form-label">Email</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="email_contact" name="email_contact" placeholder="email@exemple.com" >
-                          </div>
+                            <label for="adress_contact" class="col-sm-3 col-form-label">Adresse</label>
+                            <div class="col-sm-9 mb-4">
+                                <input type="text" class="form-control " id="adress_contact" name="adress_contact" placeholder="Adresse" [(ngModel)]="employee.adress_contact">
+                            </div>
 
-                          <label for="adress_contact" class="col-sm-3 col-form-label">Adresse</label>
-                          <div class="col-sm-9 mb-4">
-                              <input type="text" class="form-control " id="adress_contact" name="adress_contact" placeholder="Adresse" >
-                          </div>
 
 
+                            <legend class="text text-center fs-1 mt-5 text-primary text-opacity-75">Informations Professionnelles </legend>
+                            <hr class="border-primary border-5 opacity-75 mb-3 text-primary" size="4">
 
-                          <legend class="text text-center fs-1 mt-5 text-primary text-opacity-75">Informations Professionnelles </legend>
-                          <hr class="border-primary border-5 opacity-75 mb-3 text-primary" size="4">
+                            <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-3 text-secondary">Collaborateur</div>
 
-                          <div class=" text text-center text-decoration-underline pb-4 fs-3 mt-3 text-secondary">Collaborateur</div>
 
+                            <label for="id" class="col-sm-3 col-form-label" >Identifiant<span  class="text-danger">*</span></label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="number" class="form-control" id="id" name="id" placeholder="ID" [(ngModel)]="employee.id" >
+                            </div>
 
-                          <label for="id" class="col-sm-3 col-form-label" >Identifiant<span  class="text-danger">*</span></label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="number" class="form-control" id="id" name="id" placeholder="ID" >
-                          </div>
+                            <label for="hiredate" class="col-sm-3 col-form-label">Date d’embauche<span  class="text-danger">*</span></label>
+                            <div class="col-sm-3 ">
+                                <input type="date" class="form-control" id="hiredate" name="hiredate" placeholder="Passeport" required [(ngModel)]="employee.hiredate">
+                            </div>
 
-                          <label for="hiredate" class="col-sm-3 col-form-label">Date d’embauche<span  class="text-danger">*</span></label>
-                          <div class="col-sm-3 ">
-                              <input type="date" class="form-control" id="hiredate" name="hiredate" placeholder="Passeport" required>
-                          </div>
+                            <label for="poste" class="col-sm-3 col-form-label " >Poste</label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="text" class="form-control" id="poste" name="poste" placeholder="Fonction" [(ngModel)]="employee.poste">
+                            </div>
 
-                          <label for="poste" class="col-sm-3 col-form-label " >Poste</label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="text" class="form-control" id="poste" name="poste" placeholder="Fonction" >
-                          </div>
+                            <label for="motif" class="col-sm-3 col-form-label">Motif</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="motif" name="motif" placeholder="" [(ngModel)]="employee.motif">
+                            </div>
+
+                            <div class=" text text-center text-decoration-underline pb-4 fs-3 text-secondary">Responsable</div>
 
-                          <label for="motif" class="col-sm-3 col-form-label">Motif</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="motif" name="motif" placeholder="" >
-                          </div>
 
-                          <div class=" text text-center text-decoration-underline pb-4 fs-3 text-secondary">Responsable</div>
+
+                            <label for="nom_respo" class="col-sm-3 col-form-label">Responsable</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="nom_respo" name="nom_respo" placeholder="Nom & Prenom" [(ngModel)]="employee.nom_respo">
+                            </div>
+
+                            <label for="id_respo" class="col-sm-3 col-form-label" >Identifiant de Responsable<span  class="text-danger">*</span></label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="number" class="form-control" id="id_respo" name="id_respo" placeholder="ID de Responsable" [(ngModel)]="employee.id_respo" >
+                            </div>
+
+                            <label for="tel_respo" class="col-sm-3 col-form-label " >Téléphone</label>
+                            <div class="col-sm-3 mb-4">
+                                <input type="number" class="form-control" id="tel_respo" name="tel_respo" placeholder="" [(ngModel)]="employee.tel_respo">
+                            </div>
 
+                            <label for="mail_respo" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-3 ">
+                                <input type="email" class="form-control" id="mail_respo" name="mail_respo" placeholder="email@example.com" [(ngModel)]="employee.mail_respo">
+                            </div>
+
 
+                            <div class=" text text-center text-decoration-underline pb-4 fs-3 text-secondary">Société</div>
 
-                          <label for="nom_respo" class="col-sm-3 col-form-label">Responsable</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="nom_respo" name="nom_respo" placeholder="Nom & Prenom" >
-                          </div>
-
-                          <label for="id_respo" class="col-sm-3 col-form-label" >Identifiant de Responsable<span  class="text-danger">*</span></label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="number" class="form-control" id="id_respo" name="id_respo" placeholder="ID de Responsable" >
-                          </div>
-
-                          <label for="tel_respo" class="col-sm-3 col-form-label " >Téléphone</label>
-                          <div class="col-sm-3 mb-4">
-                              <input type="number" class="form-control" id="tel_respo" name="tel_respo" placeholder="" >
-                          </div>
-
-                          <label for="mail_respo" class="col-sm-3 col-form-label">Email</label>
-                          <div class="col-sm-3 ">
-                              <input type="email" class="form-control" id="mail_respo" name="mail_respo" placeholder="email@example.com" >
-                          </div>
-
-
-                          <div class=" text text-center text-decoration-underline pb-4 fs-3 text-secondary">Société</div>
-
-
-                          <label for="nom_entre" class="col-sm-3 col-form-label" >Nom de l’entreprise</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="nom_entre" name="nom_entre" placeholder="Nom de l'entreprise" >
-                          </div>
-
-                          <label for="add_entre" class="col-sm-3 col-form-label  mb-5">Adresse de l’entreprise</label>
-                          <div class="col-sm-3 ">
-                              <input type="text" class="form-control" id="add_entre" name="add_entre" placeholder="Adresse" >
-                          </div>
-
-
-
-                          <div class="d-grid gap-2 col-6 mx-auto mb-4">
-                              <!-- <button type="submit" id="submit" class="btn btn-outline-primary rounded-pill" onclick="ajouter()">Ajouter</button> -->
-                              <input type="submit" id="submit" class="btn btn-outline-info rounded-pill" value="Ajouter" >
-                              <input type="reset" id="reset" class="btn btn-outline-secondary rounded-pill" value="Annuler">
-                          </div>
-
-
-                      <!-- </div>akhir div -->
-              </form>
-          </div>
-      </div>
-  </div>
-
-
-  
-<!--
-<script>
-
-      // button submit
-
-      $(document).ready(function(){
-      // let saisir = "<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>"
-      var nom = $("#nom");
-      var prenom= $("#prenom");
-      var prenom2= $("#prenom2");
-      var sexe= $("#sexe");
-      var genre= $("#genre");
-      var situation= $("#situation");
-      var date_naiss= $("#email");
-      var lieu_naiss= $("#lieu_naiss");
-      var pays= $("#pays");
-      var ville= $("#ville");
-      var nationalite= $("#nationalite");
-      var langue= $("#langue");//12
-
-
-      var email= $("#email");
-      var adress= $("#adress");
-      var tel= $("#tel");//15
-
-      var cin= $("#cin");
-      var passeport= $("#passeport");
-      var id_ass= $("#id_ass");
-      var id_sec= $("#id_sec");//19
-
-      var nom_contact= $("#nom_contact");
-      var rel_contact= $("#rel_contact");
-      var tel_contact= $("#tel_contact");
-      var email_contact= $("#email_contact");
-      var adress_contact= $("#adress_contact");//24
-
-      var id= $("#id");
-      var hiredate= $("#hiredate");
-      var poste= $("#poste");
-      var motif= $("#motif");//28
-
-      var nom_respo= $("#nom_respo");
-      var id_respo= $("#id_respo");
-      var tel_respo= $("#tel_respo");
-      var mail_respo= $("#mail_respo");//32
-
-      var nom_entre= $("#nom_entre");
-      var add_entre= $("#add_entre");//34
-
-      var nomRegExp = new RegExp('^[a-zA-Z - ]+$', 'g');
-      var lieuRegExp = new RegExp('^[a-zA-Z0-9]+[a-zA-Z0-9._ \-]+$','g');
-      var mailRegExp = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}','g');
-      var phoneRegExp = new RegExp('^0[1-9][0-9]{8}$','g');
-      var cinRegExp = new RegExp('[a-zA-Z0-9]{6,20}','g');
-      var idRegExp = new RegExp('[1-9][0-9]*','g');
-
-      var bool1=true,bool2=true,bool3=true,bool4=true,bool5=true,bool6=true,bool7=true,bool8=true,bool9=true,bool10=true;
-      var bool11=true,bool12=true,bool13=true,bool14=true,bool15=true,bool16=true,bool17=true,bool18=true,bool19=true,bool20=true;
-      var bool21=true,bool22=true,bool23=true,bool24=true,bool25=true,bool26=true,bool27=true,bool28=true,bool29=true,bool30=true;
-      var bool31=true,bool32=true,bool33=true,bool34=true;
-
-      $("#submit").click(function Ajouter(){
-
-// validation du nom
-              $("i").remove();
-
-              $("#nom").removeClass("is-invalid")
-              $("#nom").removeClass("is-valid")
-
-          if(nom.val()!=""){
-              if(nom.val().match(nomRegExp)){
-                  $("#nom").addClass("is-valid");
-                  bool1 = true;
-              }
-              else{
-                  $("#nom").addClass("is-invalid");
-                  $("#nom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
-                  bool1 = false;
-              }
-          }
-          else{
-              // $(this).after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
-              $("#nom").addClass("is-invalid");
-              $("#nom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
-              bool1 = false;
-          }
-
-// validation du prenom
-          $("#prenom").removeClass("is-invalid")
-          $("#prenom").removeClass("is-valid")
-
-          if(prenom.val()!=""){
-              if(prenom.val().match(nomRegExp)){
-                  $("#prenom").addClass("is-valid");
-                  bool2 = true;
-              }
-              else{
-                  $("#prenom").addClass("is-invalid");
-                  $("#prenom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un prénom valide</small></i>");
-                  bool2 = false;
-              }
-          }
-          else{
-              // $(this).after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
-              $("#prenom").addClass("is-invalid");
-              $("#prenom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un prénom</small></i>");
-              bool2 = false;
-          }
-
-// validation du deuxième prénom
-          $("#prenom2").removeClass("is-invalid");
-          $("#prenom2").removeClass("is-invalid");
-
-          if(prenom2.val()!=""){
-              if(prenom2.val().match(nomRegExp)){
-                  $("#prenom2").addClass("is-valid");
-                  bool3 = true;
-              }
-              else {
-                  $("#prenom2").addClass("is-invalid");
-                  $("#prenom2").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un deuxième prénom valide</small></i>");
-                  bool3 = false;
-              }
-          }
-
-// validation du sexe
-          $("#sexe").removeClass("is-invalid")
-          $("#sexe").removeClass("is-valid")
-
-          if(sexe.val()=="none"){
-              $("#sexe").addClass("is-invalid");
-              $("#sexe").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un sexe </small></i>");
-              bool4 = false;
-          }
-          else{
-              $("#sexe").addClass("is-valid");
-              bool4 = true;
-          }
-
-// validation du genre
-          $("#genre").removeClass("is-invalid")
-          $("#genre").removeClass("is-valid")
-
-          if(genre.val()=="none"){
-              $("#genre").addClass("is-invalid");
-              $("#genre").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un genre </small></i>");
-              bool5 = false;
-          }
-          else{
-              $("#genre").addClass("is-valid");
-              bool5 = true;
-          }
-
-// validation du situation
-          $("#situation").removeClass("is-invalid")
-          $("#situation").removeClass("is-valid")
-
-          if(situation.val()=="none"){
-              $("#situation").addClass("is-invalid");
-              $("#situation").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une situation </small></i>");
-              bool6 = false;
-          }
-          else{
-              $("#situation").addClass("is-valid");
-              bool6 = true;
-          }
-
-// validation du date de naissance
-          var date_naiss=  Date.parse(document.getElementById('date_naiss').value);
-
-          $("#date_naiss").removeClass("is-invalid");
-          $("#date_naiss").removeClass("is-valid");
-
-          if (!isNaN(date_naiss)) {
-              $("#date_naiss").addClass("is-valid");
-              bool7 = true;
-          }
-          else{
-              $("#date_naiss").addClass("is-invalid");
-              $("#date_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
-              bool7 = false;
-          }
-
-
-// validation du lieu de naissance
-          $("#lieu_naiss").removeClass("is-invalid");
-          $("#lieu_naiss").removeClass("is-valid");
-
-          if(lieu_naiss.val()!=""){
-              if(lieu_naiss.val().match(lieuRegExp)){
-                  $("#lieu_naiss").addClass("is-valid");
-                  bool8 = true;
-              }
-              else {
-                  $("#lieu_naiss").addClass("is-invalid");
-                  $("#lieu_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
-                  bool8 = false;
-              }
-          }
-
-// validation de pays
-
-          $("#pays").removeClass("is-invalid")
-          $("#pays").removeClass("is-valid")
-
-          if(pays.val()=="none"){
-              $("#pays").addClass("is-invalid");
-              $("#pays").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un pays </small></i>");
-              bool9 = false;
-          }
-          else{
-              $("#pays").addClass("is-valid");
-              bool9 = true;
-          }
-
-// validation de ville
-
-          $("#ville").removeClass("is-invalid")
-          $("#ville").removeClass("is-valid")
-
-          if(ville.val()=="none"){
-              $("#ville").addClass("is-invalid");
-              $("#ville").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une ville </small></i>");
-              bool10 = false;
-          }
-          else{
-              $("#ville").addClass("is-valid");
-              bool10 = true;
-          }
-
-// validation de nationalite
-
-          $("#nationalite").removeClass("is-invalid")
-          $("#nationalite").removeClass("is-valid")
-
-          if(nationalite.val()=="none"){
-              $("#nationalite").addClass("is-invalid");
-              $("#nationalite").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une nationalité </small></i>");
-              bool11 = false;
-          }
-          else{
-              $("#nationalite").addClass("is-valid");
-              bool11 = true;
-          }
-
-// validation du langue
-
-          $("#langue").removeClass("is-invalid")
-          $("#langue").removeClass("is-valid")
-
-          if(langue.val()=="none"){
-              $("#langue").addClass("is-invalid");
-              $("#langue").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une langue </small></i>");
-              bool12 = false;
-          }
-          else{
-              $("#langue").addClass("is-valid");
-              bool12 = true;
-          }
-
-// validation de l adresse
-          $("#adress").removeClass("is-invalid");
-          $("#adress").removeClass("is-valid");
-
-          if(adress.val()!=""){
-              if(adress.val().match(lieuRegExp)){
-                  $("#lieu_naiss").addClass("is-valid");
-                  bool13 = true;
-              }
-              else {
-                  $("#adress").addClass("is-invalid");
-                  $("#adress").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
-                  bool13 = false;
-              }
-          }
-
-// validation de l adresse email
-          $("#email").removeClass("is-invalid");
-          $("#email").removeClass("is-valid");
-
-          if(email.val()!=""){
-              if(email.val().match(mailRegExp)){
-                  $("#email").addClass("is-valid");
-                  bool14 = true;
-              }
-              else {
-                  $("#email").addClass("is-invalid");
-                  $("#email").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse email valide</small></i>");
-                  bool14 = false;
-              }
-          }
-
-// validation de numero de telephone
-          $("#tel").removeClass("is-invalid");
-          $("#tel").removeClass("is-valid");
-
-          if(tel.val()!=""){
-              if(tel.val().match(phoneRegExp)){
-                  $("#tel").addClass("is-valid");
-                  bool15 = true;
-              }
-              else {
-                  $("#tel").addClass("is-invalid");
-                  $("#tel").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
-                  bool15 = false;
-              }
-          }
-
-// validation de CIN
-          $("#cin").removeClass("is-invalid");
-          $("#cin").removeClass("is-valid");
-
-          if(cin.val()!=""){
-              if(cin.val().match(cinRegExp)){
-                  $("#cin").addClass("is-valid");
-                  bool16 = true;
-              }
-              else{
-                  $("#cin").addClass("is-invalid");
-                  $("#cin").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un CIN valide</small></i>");
-                  bool16 = false;
-              }
-          }
-          else{
-              $("#cin").addClass("is-invalid");
-              $("#cin").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir le CIN </small></i>");
-              bool16 = false;
-          }
-
-
-// validation de passeport
-          $("#passeport").removeClass("is-invalid");
-          $("#passeport").removeClass("is-valid");
-
-          if(passeport.val()!=""){
-              if(passeport.val().match(cinRegExp)){
-                  $("#passeport").addClass("is-valid");
-                  bool17 = true;
-              }
-              else {
-                  $("#passeport").addClass("is-invalid");
-                  $("#passeport").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de passeport valide</small></i>");
-                  bool17 = false;
-              }
-          }
-
-// validation de id d'assurance maladie
-          $("#id_ass").removeClass("is-invalid");
-          $("#id_ass").removeClass("is-valid");
-
-          if(id_ass.val()!=""){
-              if(id_ass.val().match(cinRegExp)){
-                  $("#id_ass").addClass("is-valid");
-                  bool18 = true;
-              }
-              else {
-                  $("#id_ass").addClass("is-invalid");
-                  $("#id_ass").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un identfiant valide</small></i>");
-                  bool18 = false;
-              }
-          }
-
-// validation de id de securite sociale
-          $("#id_sec").removeClass("is-invalid");
-          $("#id_sec").removeClass("is-valid");
-
-          if(id_sec.val()!=""){
-              if(id_sec.val().match(cinRegExp)){
-                  $("#id_sec").addClass("is-valid");
-                  bool19 = true;
-              }
-              else {
-                  $("#id_sec").addClass("is-invalid");
-                  $("#id_sec").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un identfiant valide</small></i>");
-                  bool19 = false;
-              }
-          }
-
-// validation de nom prenom de personne a contacter
-          $("#nom_contact").removeClass("is-invalid");
-          $("#nom_contact").removeClass("is-valid");
-
-          if(nom_contact.val()!=""){
-              if(nom_contact.val().match(nomRegExp)){
-                  $("#nom_contact").addClass("is-valid");
-                  bool20 = true;
-              }
-              else{
-                  $("#nom_contact").addClass("is-invalid");
-                  $("#nom_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
-                  bool20 = false;
-              }
-          }
-          else{
-              $("#nom_contact").addClass("is-invalid");
-              $("#nom_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom </small></i>");
-              bool20 = false;
-          }
-
-// validation de numero de telephone de personne a contacter
-          $("#tel_contact").removeClass("is-invalid");
-          $("#tel_contact").removeClass("is-valid");
-
-          if(tel_contact.val()!=""){
-              if(tel_contact.val().match(phoneRegExp)){
-                  $("#tel_contact").addClass("is-valid");
-                  bool21 = true;
-              }
-              else{
-                  $("#tel_contact").addClass("is-invalid");
-                  $("#tel_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
-                  bool21 = false;
-              }
-          }
-          else{
-              $("#tel_contact").addClass("is-invalid");
-              $("#tel_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone </small></i>");
-              bool21 = false;
-          }
-
-// validation d email de personne a contacter
-          $("#email_contact").removeClass("is-invalid");
-          $("#email_contact").removeClass("is-valid");
-
-          if(email_contact.val()!=""){
-              if(email_contact.val().match(mailRegExp)){
-              $("#email_contact").addClass("is-valid");
-              bool22 = true;
-              }
-              else {
-                  $("#email_contact").addClass("is-invalid");
-                  $("#email_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un email valide</small></i>");
-                  bool22 = false;
-              }
-          }
-
-// validation de l adresse de personne a contacter
-          $("#adress_contact").removeClass("is-invalid");
-          $("#adress_contact").removeClass("is-valid");
-
-          if(adress_contact.val()!=""){
-              if(adress_contact.val().match(lieuRegExp)){
-                  $("#adress_contact").addClass("is-valid");
-                  bool23 = true;
-              }
-              else {
-                  $("#adress_contact").addClass("is-invalid");
-                  $("#adress_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
-                  bool23 = false;
-              }
-          }
-
-// date d embauche
-
-          var hiredate= Date.parse(document.getElementById('hiredate').value);
-
-          $("#hiredate").removeClass("is-invalid");
-          $("#hiredate").removeClass("is-valid");
-
-          if (!isNaN(hiredate)) {
-              $("#hiredate").addClass("is-valid");
-              bool24 = true;
-          }
-          else{
-              $("#hiredate").addClass("is-invalid");
-              $("#hiredate").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
-              bool24 = false;
-          }
-//------------------------------------
-// validation du poste collaborateur
-          $("#poste").removeClass("is-invalid");
-          $("#poste").removeClass("is-invalid");
-
-          if(poste.val()!=""){
-              if(poste.val().match(nomRegExp)){
-                  $("#poste").addClass("is-valid");
-                  bool27 = true;
-              }
-              else {
-                  $("#poste").addClass("is-invalid");
-                  $("#poste").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez respecter le format (Lettres) </small></i>");
-                  bool27 = false;
-              }
-          }
-
-// validation du motif collaborateur pour employement
-          $("#motif").removeClass("is-invalid");
-          $("#motif").removeClass("is-invalid");
-
-          if(motif.val()!=""){
-              if(motif.val().match(nomRegExp)){
-                  $("#motif").addClass("is-valid");
-                  bool28  = true;
-              }
-              else {
-                  $("#motif").addClass("is-invalid");
-                  $("#motif").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez respecter le format (Lettres) </small></i>");
-                  bool28 = false;
-              }
-          }
-
-
-// validation de nom prenom du responsable
-          $("#nom_respo").removeClass("is-invalid");
-          $("#nom_respo").removeClass("is-valid");
-
-          if(nom_respo.val()!=""){
-              if(nom_respo.val().match(nomRegExp)){
-                  $("#nom_respo").addClass("is-valid");
-                  bool29 = true;
-              }
-              else {
-                  $("#nom_respo").addClass("is-invalid");
-                  $("#nom_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
-                  bool29 = false;
-              }
-          }
-
-// validation de id de responsable
-          $("#id_respo").removeClass("is-invalid");
-          $("#id_respo").removeClass("is-valid");
-
-          if(id_respo.val()!=""){
-              if(id_respo.val().match(idRegExp) && id_respo.val()>0){
-                  $("#id_respo").addClass("is-valid");
-                  bool30 = true;
-              }
-              else{
-                  $("#id_respo").addClass("is-invalid");
-                  $("#id_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un ID valide</small></i>");
-                  bool30 = false;
-              }
-          }
-          else{
-              $("#id_respo").addClass("is-invalid");
-              $("#id_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un ID  </small></i>");
-              bool30 = false;
-          }
-
-// validation de numero de telephone du responsable
-          $("#tel_respo").removeClass("is-invalid");
-          $("#tel_respo").removeClass("is-valid");
-
-          if(tel_respo.val()!=""){
-              if(tel_respo.val().match(phoneRegExp)){
-                  $("#tel_respo").addClass("is-valid");
-                  bool31 = true;
-              }
-              else{
-                  $("#tel_respo").addClass("is-invalid");
-                  $("#tel_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
-                  bool31 = false;
-              }
-          }
-
-// validation d email du responsable
-          $("#mail_respo").removeClass("is-invalid");
-          $("#mail_respo").removeClass("is-valid");
-
-          if(mail_respo.val()!=""){
-              if(mail_respo.val().match(mailRegExp)){
-                  $("#mail_respo").addClass("is-valid");
-                  bool32 = true;
-              }
-              else {
-                  $("#mail_respo").addClass("is-invalid");
-                  $("#mail_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un email valide</small></i>");
-                  bool32 = false;
-              }
-          }
-
-// validation du nom d entreprise
-          $("#nom_entre").removeClass("is-invalid");
-          $("#nom_entre").removeClass("is-valid");
-
-          if(nom_entre.val()!=""){
-              if(nom_entre.val().match(nomRegExp)){
-                  $("#nom_entre").addClass("is-valid");
-                  bool33 = true;
-              }
-              else {
-                  $("#nom_entre").addClass("is-invalid");
-                  $("#nom_entre").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
-                  bool33 = false;
-              }
-          }
-
-// validation de l adresse du société
-          $("#adress_contact").removeClass("is-invalid");
-          $("#adress_contact").removeClass("is-valid");
-
-          if(add_entre.val()!=""){
-              if(add_entre.val().match(lieuRegExp)){
-                  $("#add_entre").addClass("is-valid");
-                  bool34 = true;
-              }
-              else {
-                  $("#add_entre").addClass("is-invalid");
-                  $("#add_entre").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
-                  bool34 = false;
-              }
-          }
-
-
-          return bool1 && bool2 && bool3 && bool4 && bool5 && bool6 && bool7 && bool8 && bool9 && bool10 &&
-          bool11 && bool12 && bool13 && bool14 && bool15 && bool16 && bool17 && bool18 && bool19 && bool20 &&
-          bool21 && bool22 && bool23 && bool24 && bool25 && bool26 && bool27 && bool28 && bool29 && bool30 &&
-          bool31 && bool32 && bool33 && bool34;
-      })
-
+
+                            <label for="nom_entre" class="col-sm-3 col-form-label" >Nom de l’entreprise</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="nom_entre" name="nom_entre" placeholder="Nom de l'entreprise" [(ngModel)]="employee.nom_entre">
+                            </div>
+
+                            <label for="add_entre" class="col-sm-3 col-form-label  mb-5">Adresse de l’entreprise</label>
+                            <div class="col-sm-3 ">
+                                <input type="text" class="form-control" id="add_entre" name="add_entre" placeholder="Adresse" [(ngModel)]="employee.add_entre">
+                            </div>
+
+
+
+                            <div class="d-grid gap-2 col-6 mx-auto mb-4">
+                                <!-- <button type="submit" id="submit" class="btn btn-outline-primary rounded-pill" onclick="ajouter()">Ajouter</button> -->
+                                <input type="submit" id="submit"    class="btn btn-outline-info rounded-pill" value="Ajouter"  >
+                                <input type="reset" id="reset" class="btn btn-outline-secondary rounded-pill" value="Annuler">
+                            </div>
+
+                            <!-- [disabled]="addForm.valid" -->
+                        <!-- </div>akhir div -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+  <!--
+  <script>
+
+        // button submit
+
+        $(document).ready(function(){
+        // let saisir = "<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>"
+        var nom = $("#nom");
+        var prenom= $("#prenom");
+        var prenom2= $("#prenom2");
+        var sexe= $("#sexe");
+        var genre= $("#genre");
+        var situation= $("#situation");
+        var date_naiss= $("#email");
+        var lieu_naiss= $("#lieu_naiss");
+        var pays= $("#pays");
+        var ville= $("#ville");
+        var nationalite= $("#nationalite");
+        var langue= $("#langue");//12
+
+
+        var email= $("#email");
+        var adress= $("#adress");
+        var tel= $("#tel");//15
+
+        var cin= $("#cin");
+        var passeport= $("#passeport");
+        var id_ass= $("#id_ass");
+        var id_sec= $("#id_sec");//19
+
+        var nom_contact= $("#nom_contact");
+        var rel_contact= $("#rel_contact");
+        var tel_contact= $("#tel_contact");
+        var email_contact= $("#email_contact");
+        var adress_contact= $("#adress_contact");//24
+
+        var id= $("#id");
+        var hiredate= $("#hiredate");
+        var poste= $("#poste");
+        var motif= $("#motif");//28
+
+        var nom_respo= $("#nom_respo");
+        var id_respo= $("#id_respo");
+        var tel_respo= $("#tel_respo");
+        var mail_respo= $("#mail_respo");//32
+
+        var nom_entre= $("#nom_entre");
+        var add_entre= $("#add_entre");//34
+
+        var nomRegExp = new RegExp('^[a-zA-Z - ]+$', 'g');
+        var lieuRegExp = new RegExp('^[a-zA-Z0-9]+[a-zA-Z0-9._ \-]+$','g');
+        var mailRegExp = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}','g');
+        var phoneRegExp = new RegExp('^0[1-9][0-9]{8}$','g');
+        var cinRegExp = new RegExp('[a-zA-Z0-9]{6,20}','g');
+        var idRegExp = new RegExp('[1-9][0-9]*','g');
+
+        var bool1=true,bool2=true,bool3=true,bool4=true,bool5=true,bool6=true,bool7=true,bool8=true,bool9=true,bool10=true;
+        var bool11=true,bool12=true,bool13=true,bool14=true,bool15=true,bool16=true,bool17=true,bool18=true,bool19=true,bool20=true;
+        var bool21=true,bool22=true,bool23=true,bool24=true,bool25=true,bool26=true,bool27=true,bool28=true,bool29=true,bool30=true;
+        var bool31=true,bool32=true,bool33=true,bool34=true;
+
+        $("#submit").click(function Ajouter(){
+
+  // validation du nom
+                $("i").remove();
+
+                $("#nom").removeClass("is-invalid")
+                $("#nom").removeClass("is-valid")
+
+            if(nom.val()!=""){
+                if(nom.val().match(nomRegExp)){
+                    $("#nom").addClass("is-valid");
+                    bool1 = true;
+                }
+                else{
+                    $("#nom").addClass("is-invalid");
+                    $("#nom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
+                    bool1 = false;
+                }
+            }
+            else{
+                // $(this).after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
+                $("#nom").addClass("is-invalid");
+                $("#nom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
+                bool1 = false;
+            }
+
+  // validation du prenom
+            $("#prenom").removeClass("is-invalid")
+            $("#prenom").removeClass("is-valid")
+
+            if(prenom.val()!=""){
+                if(prenom.val().match(nomRegExp)){
+                    $("#prenom").addClass("is-valid");
+                    bool2 = true;
+                }
+                else{
+                    $("#prenom").addClass("is-invalid");
+                    $("#prenom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un prénom valide</small></i>");
+                    bool2 = false;
+                }
+            }
+            else{
+                // $(this).after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>");
+                $("#prenom").addClass("is-invalid");
+                $("#prenom").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un prénom</small></i>");
+                bool2 = false;
+            }
+
+  // validation du deuxième prénom
+            $("#prenom2").removeClass("is-invalid");
+            $("#prenom2").removeClass("is-invalid");
+
+            if(prenom2.val()!=""){
+                if(prenom2.val().match(nomRegExp)){
+                    $("#prenom2").addClass("is-valid");
+                    bool3 = true;
+                }
+                else {
+                    $("#prenom2").addClass("is-invalid");
+                    $("#prenom2").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un deuxième prénom valide</small></i>");
+                    bool3 = false;
+                }
+            }
+
+  // validation du sexe
+            $("#sexe").removeClass("is-invalid")
+            $("#sexe").removeClass("is-valid")
+
+            if(sexe.val()=="none"){
+                $("#sexe").addClass("is-invalid");
+                $("#sexe").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un sexe </small></i>");
+                bool4 = false;
+            }
+            else{
+                $("#sexe").addClass("is-valid");
+                bool4 = true;
+            }
+
+  // validation du genre
+            $("#genre").removeClass("is-invalid")
+            $("#genre").removeClass("is-valid")
+
+            if(genre.val()=="none"){
+                $("#genre").addClass("is-invalid");
+                $("#genre").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un genre </small></i>");
+                bool5 = false;
+            }
+            else{
+                $("#genre").addClass("is-valid");
+                bool5 = true;
+            }
+
+  // validation du situation
+            $("#situation").removeClass("is-invalid")
+            $("#situation").removeClass("is-valid")
+
+            if(situation.val()=="none"){
+                $("#situation").addClass("is-invalid");
+                $("#situation").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une situation </small></i>");
+                bool6 = false;
+            }
+            else{
+                $("#situation").addClass("is-valid");
+                bool6 = true;
+            }
+
+  // validation du date de naissance
+            var date_naiss=  Date.parse(document.getElementById('date_naiss').value);
+
+            $("#date_naiss").removeClass("is-invalid");
+            $("#date_naiss").removeClass("is-valid");
+
+            if (!isNaN(date_naiss)) {
+                $("#date_naiss").addClass("is-valid");
+                bool7 = true;
+            }
+            else{
+                $("#date_naiss").addClass("is-invalid");
+                $("#date_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
+                bool7 = false;
+            }
+
+
+  // validation du lieu de naissance
+            $("#lieu_naiss").removeClass("is-invalid");
+            $("#lieu_naiss").removeClass("is-valid");
+
+            if(lieu_naiss.val()!=""){
+                if(lieu_naiss.val().match(lieuRegExp)){
+                    $("#lieu_naiss").addClass("is-valid");
+                    bool8 = true;
+                }
+                else {
+                    $("#lieu_naiss").addClass("is-invalid");
+                    $("#lieu_naiss").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
+                    bool8 = false;
+                }
+            }
+
+  // validation de pays
+
+            $("#pays").removeClass("is-invalid")
+            $("#pays").removeClass("is-valid")
+
+            if(pays.val()=="none"){
+                $("#pays").addClass("is-invalid");
+                $("#pays").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir un pays </small></i>");
+                bool9 = false;
+            }
+            else{
+                $("#pays").addClass("is-valid");
+                bool9 = true;
+            }
+
+  // validation de ville
+
+            $("#ville").removeClass("is-invalid")
+            $("#ville").removeClass("is-valid")
+
+            if(ville.val()=="none"){
+                $("#ville").addClass("is-invalid");
+                $("#ville").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une ville </small></i>");
+                bool10 = false;
+            }
+            else{
+                $("#ville").addClass("is-valid");
+                bool10 = true;
+            }
+
+  // validation de nationalite
+
+            $("#nationalite").removeClass("is-invalid")
+            $("#nationalite").removeClass("is-valid")
+
+            if(nationalite.val()=="none"){
+                $("#nationalite").addClass("is-invalid");
+                $("#nationalite").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une nationalité </small></i>");
+                bool11 = false;
+            }
+            else{
+                $("#nationalite").addClass("is-valid");
+                bool11 = true;
+            }
+
+  // validation du langue
+
+            $("#langue").removeClass("is-invalid")
+            $("#langue").removeClass("is-valid")
+
+            if(langue.val()=="none"){
+                $("#langue").addClass("is-invalid");
+                $("#langue").after("<i ><small class='ms-3 mb-4 text-danger'  >Veuillez chosir une langue </small></i>");
+                bool12 = false;
+            }
+            else{
+                $("#langue").addClass("is-valid");
+                bool12 = true;
+            }
+
+  // validation de l adresse
+            $("#adress").removeClass("is-invalid");
+            $("#adress").removeClass("is-valid");
+
+            if(adress.val()!=""){
+                if(adress.val().match(lieuRegExp)){
+                    $("#lieu_naiss").addClass("is-valid");
+                    bool13 = true;
+                }
+                else {
+                    $("#adress").addClass("is-invalid");
+                    $("#adress").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
+                    bool13 = false;
+                }
+            }
+
+  // validation de l adresse email
+            $("#email").removeClass("is-invalid");
+            $("#email").removeClass("is-valid");
+
+            if(email.val()!=""){
+                if(email.val().match(mailRegExp)){
+                    $("#email").addClass("is-valid");
+                    bool14 = true;
+                }
+                else {
+                    $("#email").addClass("is-invalid");
+                    $("#email").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse email valide</small></i>");
+                    bool14 = false;
+                }
+            }
+
+  // validation de numero de telephone
+            $("#tel").removeClass("is-invalid");
+            $("#tel").removeClass("is-valid");
+
+            if(tel.val()!=""){
+                if(tel.val().match(phoneRegExp)){
+                    $("#tel").addClass("is-valid");
+                    bool15 = true;
+                }
+                else {
+                    $("#tel").addClass("is-invalid");
+                    $("#tel").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
+                    bool15 = false;
+                }
+            }
+
+  // validation de CIN
+            $("#cin").removeClass("is-invalid");
+            $("#cin").removeClass("is-valid");
+
+            if(cin.val()!=""){
+                if(cin.val().match(cinRegExp)){
+                    $("#cin").addClass("is-valid");
+                    bool16 = true;
+                }
+                else{
+                    $("#cin").addClass("is-invalid");
+                    $("#cin").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un CIN valide</small></i>");
+                    bool16 = false;
+                }
+            }
+            else{
+                $("#cin").addClass("is-invalid");
+                $("#cin").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir le CIN </small></i>");
+                bool16 = false;
+            }
+
+
+  // validation de passeport
+            $("#passeport").removeClass("is-invalid");
+            $("#passeport").removeClass("is-valid");
+
+            if(passeport.val()!=""){
+                if(passeport.val().match(cinRegExp)){
+                    $("#passeport").addClass("is-valid");
+                    bool17 = true;
+                }
+                else {
+                    $("#passeport").addClass("is-invalid");
+                    $("#passeport").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de passeport valide</small></i>");
+                    bool17 = false;
+                }
+            }
+
+  // validation de id d'assurance maladie
+            $("#id_ass").removeClass("is-invalid");
+            $("#id_ass").removeClass("is-valid");
+
+            if(id_ass.val()!=""){
+                if(id_ass.val().match(cinRegExp)){
+                    $("#id_ass").addClass("is-valid");
+                    bool18 = true;
+                }
+                else {
+                    $("#id_ass").addClass("is-invalid");
+                    $("#id_ass").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un identfiant valide</small></i>");
+                    bool18 = false;
+                }
+            }
+
+  // validation de id de securite sociale
+            $("#id_sec").removeClass("is-invalid");
+            $("#id_sec").removeClass("is-valid");
+
+            if(id_sec.val()!=""){
+                if(id_sec.val().match(cinRegExp)){
+                    $("#id_sec").addClass("is-valid");
+                    bool19 = true;
+                }
+                else {
+                    $("#id_sec").addClass("is-invalid");
+                    $("#id_sec").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un identfiant valide</small></i>");
+                    bool19 = false;
+                }
+            }
+
+  // validation de nom prenom de personne a contacter
+            $("#nom_contact").removeClass("is-invalid");
+            $("#nom_contact").removeClass("is-valid");
+
+            if(nom_contact.val()!=""){
+                if(nom_contact.val().match(nomRegExp)){
+                    $("#nom_contact").addClass("is-valid");
+                    bool20 = true;
+                }
+                else{
+                    $("#nom_contact").addClass("is-invalid");
+                    $("#nom_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
+                    bool20 = false;
+                }
+            }
+            else{
+                $("#nom_contact").addClass("is-invalid");
+                $("#nom_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom </small></i>");
+                bool20 = false;
+            }
+
+  // validation de numero de telephone de personne a contacter
+            $("#tel_contact").removeClass("is-invalid");
+            $("#tel_contact").removeClass("is-valid");
+
+            if(tel_contact.val()!=""){
+                if(tel_contact.val().match(phoneRegExp)){
+                    $("#tel_contact").addClass("is-valid");
+                    bool21 = true;
+                }
+                else{
+                    $("#tel_contact").addClass("is-invalid");
+                    $("#tel_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
+                    bool21 = false;
+                }
+            }
+            else{
+                $("#tel_contact").addClass("is-invalid");
+                $("#tel_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone </small></i>");
+                bool21 = false;
+            }
+
+  // validation d email de personne a contacter
+            $("#email_contact").removeClass("is-invalid");
+            $("#email_contact").removeClass("is-valid");
+
+            if(email_contact.val()!=""){
+                if(email_contact.val().match(mailRegExp)){
+                $("#email_contact").addClass("is-valid");
+                bool22 = true;
+                }
+                else {
+                    $("#email_contact").addClass("is-invalid");
+                    $("#email_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un email valide</small></i>");
+                    bool22 = false;
+                }
+            }
+
+  // validation de l adresse de personne a contacter
+            $("#adress_contact").removeClass("is-invalid");
+            $("#adress_contact").removeClass("is-valid");
+
+            if(adress_contact.val()!=""){
+                if(adress_contact.val().match(lieuRegExp)){
+                    $("#adress_contact").addClass("is-valid");
+                    bool23 = true;
+                }
+                else {
+                    $("#adress_contact").addClass("is-invalid");
+                    $("#adress_contact").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
+                    bool23 = false;
+                }
+            }
+
+  // date d embauche
+
+            var hiredate= Date.parse(document.getElementById('hiredate').value);
+
+            $("#hiredate").removeClass("is-invalid");
+            $("#hiredate").removeClass("is-valid");
+
+            if (!isNaN(hiredate)) {
+                $("#hiredate").addClass("is-valid");
+                bool24 = true;
+            }
+            else{
+                $("#hiredate").addClass("is-invalid");
+                $("#hiredate").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une date</small></i>");
+                bool24 = false;
+            }
+  //------------------------------------
+  // validation du poste collaborateur
+            $("#poste").removeClass("is-invalid");
+            $("#poste").removeClass("is-invalid");
+
+            if(poste.val()!=""){
+                if(poste.val().match(nomRegExp)){
+                    $("#poste").addClass("is-valid");
+                    bool27 = true;
+                }
+                else {
+                    $("#poste").addClass("is-invalid");
+                    $("#poste").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez respecter le format (Lettres) </small></i>");
+                    bool27 = false;
+                }
+            }
+
+  // validation du motif collaborateur pour employement
+            $("#motif").removeClass("is-invalid");
+            $("#motif").removeClass("is-invalid");
+
+            if(motif.val()!=""){
+                if(motif.val().match(nomRegExp)){
+                    $("#motif").addClass("is-valid");
+                    bool28  = true;
+                }
+                else {
+                    $("#motif").addClass("is-invalid");
+                    $("#motif").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez respecter le format (Lettres) </small></i>");
+                    bool28 = false;
+                }
+            }
+
+
+  // validation de nom prenom du responsable
+            $("#nom_respo").removeClass("is-invalid");
+            $("#nom_respo").removeClass("is-valid");
+
+            if(nom_respo.val()!=""){
+                if(nom_respo.val().match(nomRegExp)){
+                    $("#nom_respo").addClass("is-valid");
+                    bool29 = true;
+                }
+                else {
+                    $("#nom_respo").addClass("is-invalid");
+                    $("#nom_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
+                    bool29 = false;
+                }
+            }
+
+  // validation de id de responsable
+            $("#id_respo").removeClass("is-invalid");
+            $("#id_respo").removeClass("is-valid");
+
+            if(id_respo.val()!=""){
+                if(id_respo.val().match(idRegExp) && id_respo.val()>0){
+                    $("#id_respo").addClass("is-valid");
+                    bool30 = true;
+                }
+                else{
+                    $("#id_respo").addClass("is-invalid");
+                    $("#id_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un ID valide</small></i>");
+                    bool30 = false;
+                }
+            }
+            else{
+                $("#id_respo").addClass("is-invalid");
+                $("#id_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un ID  </small></i>");
+                bool30 = false;
+            }
+
+  // validation de numero de telephone du responsable
+            $("#tel_respo").removeClass("is-invalid");
+            $("#tel_respo").removeClass("is-valid");
+
+            if(tel_respo.val()!=""){
+                if(tel_respo.val().match(phoneRegExp)){
+                    $("#tel_respo").addClass("is-valid");
+                    bool31 = true;
+                }
+                else{
+                    $("#tel_respo").addClass("is-invalid");
+                    $("#tel_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un numéro de téléphone valide</small></i>");
+                    bool31 = false;
+                }
+            }
+
+  // validation d email du responsable
+            $("#mail_respo").removeClass("is-invalid");
+            $("#mail_respo").removeClass("is-valid");
+
+            if(mail_respo.val()!=""){
+                if(mail_respo.val().match(mailRegExp)){
+                    $("#mail_respo").addClass("is-valid");
+                    bool32 = true;
+                }
+                else {
+                    $("#mail_respo").addClass("is-invalid");
+                    $("#mail_respo").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un email valide</small></i>");
+                    bool32 = false;
+                }
+            }
+
+  // validation du nom d entreprise
+            $("#nom_entre").removeClass("is-invalid");
+            $("#nom_entre").removeClass("is-valid");
+
+            if(nom_entre.val()!=""){
+                if(nom_entre.val().match(nomRegExp)){
+                    $("#nom_entre").addClass("is-valid");
+                    bool33 = true;
+                }
+                else {
+                    $("#nom_entre").addClass("is-invalid");
+                    $("#nom_entre").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom valide</small></i>");
+                    bool33 = false;
+                }
+            }
+
+  // validation de l adresse du société
+            $("#adress_contact").removeClass("is-invalid");
+            $("#adress_contact").removeClass("is-valid");
+
+            if(add_entre.val()!=""){
+                if(add_entre.val().match(lieuRegExp)){
+                    $("#add_entre").addClass("is-valid");
+                    bool34 = true;
+                }
+                else {
+                    $("#add_entre").addClass("is-invalid");
+                    $("#add_entre").after("<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir une adresse valide</small></i>");
+                    bool34 = false;
+                }
+            }
+
+
+            return bool1 && bool2 && bool3 && bool4 && bool5 && bool6 && bool7 && bool8 && bool9 && bool10 &&
+            bool11 && bool12 && bool13 && bool14 && bool15 && bool16 && bool17 && bool18 && bool19 && bool20 &&
+            bool21 && bool22 && bool23 && bool24 && bool25 && bool26 && bool27 && bool28 && bool29 && bool30 &&
+            bool31 && bool32 && bool33 && bool34;
+        })
+
+
+    })
+
+
+
+    // Button reset
+
+  $(document).ready(function(){
+
+
+    $("#reset").click(function(){
+
+        $("i").remove();
+
+            $("#nom").removeClass("is-invalid")
+            $("#nom").removeClass("is-valid")
+
+            $("#prenom").removeClass("is-invalid")
+            $("#prenom").removeClass("is-valid")
+
+            $("#prenom2").removeClass("is-invalid")
+            $("#prenom2").removeClass("is-invalid")
+
+            $("#sexe").removeClass("is-invalid")
+            $("#sexe").removeClass("is-valid")
+
+            $("#genre").removeClass("is-invalid")
+            $("#genre").removeClass("is-valid")
+
+            $("#situation").removeClass("is-invalid")
+            $("#situation").removeClass("is-valid")
+
+            $("#date_naiss").removeClass("is-invalid");
+            $("#date_naiss").removeClass("is-valid");
+
+            $("#lieu_naiss").removeClass("is-invalid");
+            $("#lieu_naiss").removeClass("is-valid");
+
+            $("#pays").removeClass("is-invalid")
+            $("#pays").removeClass("is-valid")
+
+            $("#ville").removeClass("is-invalid")
+            $("#ville").removeClass("is-valid")
+
+            $("#nationalite").removeClass("is-invalid")
+            $("#nationalite").removeClass("is-valid")
+
+            $("#langue").removeClass("is-invalid")
+            $("#langue").removeClass("is-valid")
+
+            $("#adress").removeClass("is-invalid");
+            $("#adress").removeClass("is-valid");
+
+            $("#email").removeClass("is-invalid");
+            $("#email").removeClass("is-valid");
+
+            $("#tel").removeClass("is-invalid");
+            $("#tel").removeClass("is-valid");
+
+
+            $("#cin").removeClass("is-invalid");
+            $("#cin").removeClass("is-valid");
+
+            $("#passeport").removeClass("is-invalid");
+            $("#passeport").removeClass("is-valid");
+
+            $("#id_ass").removeClass("is-invalid");
+            $("#id_ass").removeClass("is-valid");
+
+            $("#id_sec").removeClass("is-invalid");
+            $("#id_sec").removeClass("is-valid");
+
+
+            $("#nom_contact").removeClass("is-invalid");
+            $("#nom_contact").removeClass("is-valid");
+
+            $("#tel_contact").removeClass("is-invalid");
+            $("#tel_contact").removeClass("is-valid");
+
+            $("#email_contact").removeClass("is-invalid");
+            $("#email_contact").removeClass("is-valid");
+
+            $("#adress_contact").removeClass("is-invalid");
+            $("#adress_contact").removeClass("is-valid");
+
+            $("#hiredate").removeClass("is-invalid");
+            $("#hiredate").removeClass("is-valid");
+
+            $("#poste").removeClass("is-invalid");
+            $("#poste").removeClass("is-invalid");
+
+            $("#motif").removeClass("is-invalid");
+            $("#motif").removeClass("is-invalid");
+
+            $("#nom_respo").removeClass("is-invalid");
+            $("#nom_respo").removeClass("is-valid");
+
+            $("#id_respo").removeClass("is-invalid");
+            $("#id_respo").removeClass("is-valid");
+
+            $("#tel_respo").removeClass("is-invalid");
+            $("#tel_respo").removeClass("is-valid");
+
+            $("#mail_respo").removeClass("is-invalid");
+            $("#mail_respo").removeClass("is-valid");
+
+            $("#nom_entre").removeClass("is-invalid");
+            $("#nom_entre").removeClass("is-valid");
+
+            $("#adress_contact").removeClass("is-invalid");
+            $("#adress_contact").removeClass("is-valid");
+
+    })
 
   })
 
-
-
-  // Button reset
-
-$(document).ready(function(){
-
-
-  $("#reset").click(function(){
-
-      $("i").remove();
-
-          $("#nom").removeClass("is-invalid")
-          $("#nom").removeClass("is-valid")
-
-          $("#prenom").removeClass("is-invalid")
-          $("#prenom").removeClass("is-valid")
-
-          $("#prenom2").removeClass("is-invalid")
-          $("#prenom2").removeClass("is-invalid")
-
-          $("#sexe").removeClass("is-invalid")
-          $("#sexe").removeClass("is-valid")
-
-          $("#genre").removeClass("is-invalid")
-          $("#genre").removeClass("is-valid")
-
-          $("#situation").removeClass("is-invalid")
-          $("#situation").removeClass("is-valid")
-
-          $("#date_naiss").removeClass("is-invalid");
-          $("#date_naiss").removeClass("is-valid");
-
-          $("#lieu_naiss").removeClass("is-invalid");
-          $("#lieu_naiss").removeClass("is-valid");
-
-          $("#pays").removeClass("is-invalid")
-          $("#pays").removeClass("is-valid")
-
-          $("#ville").removeClass("is-invalid")
-          $("#ville").removeClass("is-valid")
-
-          $("#nationalite").removeClass("is-invalid")
-          $("#nationalite").removeClass("is-valid")
-
-          $("#langue").removeClass("is-invalid")
-          $("#langue").removeClass("is-valid")
-
-          $("#adress").removeClass("is-invalid");
-          $("#adress").removeClass("is-valid");
-
-          $("#email").removeClass("is-invalid");
-          $("#email").removeClass("is-valid");
-
-          $("#tel").removeClass("is-invalid");
-          $("#tel").removeClass("is-valid");
-
-
-          $("#cin").removeClass("is-invalid");
-          $("#cin").removeClass("is-valid");
-
-          $("#passeport").removeClass("is-invalid");
-          $("#passeport").removeClass("is-valid");
-
-          $("#id_ass").removeClass("is-invalid");
-          $("#id_ass").removeClass("is-valid");
-
-          $("#id_sec").removeClass("is-invalid");
-          $("#id_sec").removeClass("is-valid");
-
-
-          $("#nom_contact").removeClass("is-invalid");
-          $("#nom_contact").removeClass("is-valid");
-
-          $("#tel_contact").removeClass("is-invalid");
-          $("#tel_contact").removeClass("is-valid");
-
-          $("#email_contact").removeClass("is-invalid");
-          $("#email_contact").removeClass("is-valid");
-
-          $("#adress_contact").removeClass("is-invalid");
-          $("#adress_contact").removeClass("is-valid");
-
-          $("#hiredate").removeClass("is-invalid");
-          $("#hiredate").removeClass("is-valid");
-
-          $("#poste").removeClass("is-invalid");
-          $("#poste").removeClass("is-invalid");
-
-          $("#motif").removeClass("is-invalid");
-          $("#motif").removeClass("is-invalid");
-
-          $("#nom_respo").removeClass("is-invalid");
-          $("#nom_respo").removeClass("is-valid");
-
-          $("#id_respo").removeClass("is-invalid");
-          $("#id_respo").removeClass("is-valid");
-
-          $("#tel_respo").removeClass("is-invalid");
-          $("#tel_respo").removeClass("is-valid");
-
-          $("#mail_respo").removeClass("is-invalid");
-          $("#mail_respo").removeClass("is-valid");
-
-          $("#nom_entre").removeClass("is-invalid");
-          $("#nom_entre").removeClass("is-valid");
-
-          $("#adress_contact").removeClass("is-invalid");
-          $("#adress_contact").removeClass("is-valid");
-
-  })
-
-})
-
-</script> -->
+  </script> -->
 
 
 
