@@ -1,3 +1,4 @@
+import { UpdateComponent } from './components/pages/employees/update/update.component';
 import { AvertissementComponent } from './components/pages/employees/avertissement/avertissement.component';
 import { DepartComponent } from './components/pages/employees/depart/depart.component';
 import { RecrutementComponent } from './components/pages/employees/recrutement/recrutement.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'recrutement',component:RecrutementComponent},
   {path:'depart',component:DepartComponent},
   {path:'avertissement',component:AvertissementComponent},
+  {path:'update/:id',component:UpdateComponent}
 ];
 
 @NgModule({

@@ -1,19 +1,19 @@
 
 
-<div >
+<div class="container" id="main-container">
 
     <div class="row mt-5 pt-4 ms-4 me-4 ">
                 <!-- SEARCH FORM -->
         <form class="d-flex  col-sm-6 " role="search" method="" action="">
-            <input class="form-control me-2" type="search" placeholder="Chercher un collaborateur . . ." aria-label="Search">
-            <div class="input-group-append">
+            <input class="form-control me-2" type="search" name="key" (ngModelChange)="searchCollaborateurs(key.value)" #key="ngModel" ngModel placeholder="Chercher un collaborateur . . ." aria-label="Search" >
+            <!-- <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit" id="chercher" name="chercher" >
-                    <!-- <i class="fas fa-search"></i> -->
+                    -----<i class="fas fa-search"></i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-            </div>
+            </div> -->
         </form>
         <div class="col-sm-3"></div>
                 <!-- Icon d'ajout collaborateur -->
@@ -58,7 +58,24 @@
             <td> {{employee.email}} </td>
             <td> {{employee.poste}} </td>
             <td> {{employee.hiredate}} </td>
-            <td></td>
+
+            <td>
+              <!-- <div class="float-right btn-group btn-group-sm">
+                <a (click)="onOpenModal( employee , 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                <a (click)="onOpenModal( employee , 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+              </div> -->
+
+              <!-- <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button> -->
+              <svg (click)="updateEmployee(employee.id)" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-pencil me-4" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+              </svg>
+
+              <!-- <button (click)="deleteEmployee(employee.id, employee)" class="btn btn-info">Delete</button> -->
+              <svg (click)="deleteEmployee(employee.id, employee)" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+              </svg>
+            </td>
+
           </tr>
           <!-- <tr>
             <td scope="row"></td>
@@ -72,5 +89,51 @@
     </table>
 
 
+
+    <!-- Edit -->
+
+<!--
+    <div class="modal fade" id="updateEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeEditModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form  #editForm="ngForm" >
+              <div class="form-group">
+                <label for="namee">Name</label>
+                <input type="text" ngModel="{{ editeEmployee?.nom}}" name="name" class="form-control" id="namee" aria-describedby="emailHelp" placeholder="Name">
+              </div>
+              <input type="hidden" ngModel="{{ editeEmployee?.id}}" name="id" class="form-control" id="id" placeholder="Email">
+              <input type="hidden" ngModel="{{ editeEmployee?.prenom}}" name="userCode" class="form-control" id="userCode" placeholder="Email">
+              <div class="form-group">
+                <label for="emaill">Email Address</label>
+                <input type="email" ngModel="{{ editeEmployee?.email}}"  name="email" class="form-control" id="emaill" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Job title</label>
+                <input type="text" ngModel="{{ editeEmployee?.cin}}" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title">
+              </div>
+              <div class="form-group">
+                <label for="phonee">Phone</label>
+                <input type="text" ngModel="{{ editeEmployee?.tel}}"  name="phone" class="form-control" id="phonee"  placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <label for="imageUrll">Image URL</label>
+                <input type="text" ngModel="{{ editeEmployee?.poste}}"  name="imageUrl" class="form-control" id="imageUrll" placeholder="Image URL">
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                <button (click)="onUpdateCollaborateur(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
 </div>

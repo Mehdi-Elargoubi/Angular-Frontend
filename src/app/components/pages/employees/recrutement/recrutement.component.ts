@@ -20,7 +20,7 @@ export class RecrutementComponent implements OnInit {
 
 
       // button submit
-
+    
       $(document).ready(function(){
         // let saisir = "<i class='ms-3 mb-4 text-danger'><small  >Veuillez saisir un nom</small></i>"
         var nom = $("#nom");

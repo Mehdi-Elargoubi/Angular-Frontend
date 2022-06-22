@@ -13,6 +13,7 @@ import { AvertissementComponent } from './components/pages/employees/avertisseme
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component'
 import { FormsModule } from '@angular/forms';
+import { UpdateComponent } from './components/pages/employees/update/update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     DepartComponent,
     AvertissementComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
